@@ -54,21 +54,3 @@ const Donations = () => {
 };
 
 export default Donations;
-
-{/* <div className="mt-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {jobs.slice(0, dataLength).map((job) => (
-            <Job key={job.id} job={job}></Job>
-          ))}
-        </div>
-        <div className="flex items-center justify-center mt-12">
-          <div className={dataLength === jobs.length ? "hidden" : ""}>
-            <button
-              onClick={() => setDataLength(jobs.length)}
-              className="btn text-white bg-gradient-to-r from-indigo-500 to-blue-400"
-            >
-              Show All Jobs
-            </button>
-          </div>
-        </div>
-      </div> */}
