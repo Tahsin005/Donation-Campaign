@@ -1,8 +1,15 @@
+import { Link, useNavigate } from "react-router-dom";
 
 const HomePageCard = ({card}) => {
     const {id, title, category_name, imgLink, accentColor, mainColor, btnBg, description, price} = card;
+
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate()
+    }
     return (
-        <div className="">
+        <Link to={`/details/${id}`} state={card} className="">
             <div className="h-full flex flex-col items-start justify-items-start border-gray-200 rounded-lg shadow"  style={{ backgroundColor: accentColor }}>
                 
                 <img src={imgLink} alt="" className="rounded-t-lg object-cover w-full"/>
@@ -16,7 +23,7 @@ const HomePageCard = ({card}) => {
                     </h5>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

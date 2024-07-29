@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import HomePageCard from "../HomePageCard/HomePageCard";
-
-import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { Bounce, ToastContainer } from 'react-toastify';
+import { Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const HomePageCards = ({ searchValue = null }) => {
