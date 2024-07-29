@@ -40,7 +40,7 @@ const Statistics = () => {
         responsive: true,
         plugins: {
             legend: {
-                position: 'top',
+                position: 'bottom',
             },
             tooltip: {
                 callbacks: {
