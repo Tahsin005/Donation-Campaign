@@ -35,8 +35,8 @@ const Navbar = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FF444A] md:p-0 ${
-                      isActive ? 'text-[#FF444A] underline underline-offset-4' : ''
+                    `block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#FF444A] md:p-0 ${
+                      isActive ? 'text-red-500 underline underline-offset-4' : ''
                     }`
                   }
                   aria-current="page"
@@ -48,8 +48,8 @@ const Navbar = () => {
                 <NavLink
                   to="/donation"
                   className={({ isActive }) =>
-                    `block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FF444A] md:p-0 ${
-                      isActive ? 'text-[#FF444A] underline underline-offset-4' : ''
+                    `block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#FF444A] md:p-0 ${
+                      isActive ? 'text-red-500 underline underline-offset-4' : ''
                     }`
                   }
                 >
@@ -60,8 +60,8 @@ const Navbar = () => {
                 <NavLink
                   to="/statistics"
                   className={({ isActive }) =>
-                    `block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-[#FF444A] md:p-0 ${
-                      isActive ? 'text-[#FF444A] underline underline-offset-4' : ''
+                    `block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 hover:text-[#FF444A] md:p-0 ${
+                      isActive ? 'text-red-500 underline underline-offset-4' : ''
                     }`
                   }
                 >

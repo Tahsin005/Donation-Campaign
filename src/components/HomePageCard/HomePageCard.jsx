@@ -1,7 +1,6 @@
 
 const HomePageCard = ({card}) => {
     const {id, title, category_name, imgLink, accentColor, mainColor, btnBg, description, price} = card;
-    console.log(accentColor);
     return (
         <div className="">
             <div className="h-full flex flex-col items-start justify-items-start border-gray-200 rounded-lg shadow"  style={{ backgroundColor: accentColor }}>
