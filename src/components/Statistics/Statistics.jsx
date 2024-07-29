@@ -26,7 +26,7 @@ const Statistics = () => {
             datasets: [
                 {
                     label: 'Values',
-                    data: [(donations.length / 12) * 100, (100 - (donations.length / 12))], 
+                    data: [(donations.length / 12) * 100, (100 - ((donations.length / 12) * 100))], 
                     backgroundColor: ['#FF444A', '#00C49F'],
                     borderColor: ['#FF444A', '#00C49F'],
                     borderWidth: 1,
@@ -43,7 +43,14 @@ const Statistics = () => {
                 position: 'top',
             },
             tooltip: {
-                enabled: true,
+                callbacks: {
+                    label: function(context) {
+                        const label = context.label || '';
+                        const value = context.raw;
+                        const percentage = ((value / data.datasets[0].data.reduce((a, b) => a + b)) * 100).toFixed(2);
+                        return `${label}: ${value} (${percentage}%)`;
+                    },
+                },
             },
         },
     };
