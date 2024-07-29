@@ -3,7 +3,7 @@ import HomePageCard from "../HomePageCard/HomePageCard";
 import toast, { Toaster } from 'react-hot-toast';
 import { Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import PropTypes from 'prop-types';
 const HomePageCards = ({ searchValue = null }) => {
   let [allCards, setAllCards] = useState([]);
   let [displayCards, setDisplayedCards] = useState([]);
@@ -68,4 +68,7 @@ const HomePageCards = ({ searchValue = null }) => {
   );
 };
 
+HomePageCards.propTypes = {
+  searchValue: PropTypes.string,
+}
 export default HomePageCards;

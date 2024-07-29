@@ -11,6 +11,7 @@ import Donation from './components/Donation/Donation.jsx';
 import Statistics from './components/Statistics/Statistics.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import DonationDetails from './components/DonationDetails/DonationDetails.jsx';
+import Donations from './components/Donations/Donations.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/donation",
-        element: <Donation></Donation>,
+        element: <Donations></Donations>,
       },
       {
         path: "/statistics",

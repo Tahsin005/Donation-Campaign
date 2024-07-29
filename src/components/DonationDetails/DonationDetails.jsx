@@ -1,4 +1,4 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { addToDonations } from "../../utilities/LocalStorage";
 
 import toast, { Toaster } from 'react-hot-toast';
@@ -7,9 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useState } from "react";
 
 const DonationDetails = () => {
-    const params = useParams();
     const {state} = useLocation()
-    const {id, title, category_name, imgLink, accentColor, mainColor, btnBg, description, price} = state;
+    const {id, title, imgLink, description, price} = state;
     
     const [successToastShown, setSuccessToastShown] = useState(false);
     const [alreadyDonatedToastShown, setAlreadyDonatedToastShown] = useState(false);
