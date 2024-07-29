@@ -30,25 +30,32 @@ const Donations = () => {
         setDonationsList(donations);
     }, [donations]);
 
+    
   
     return (
-        <div className="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 my-12 ">
-            <div className="grid md:grid-cols-2 gap-4">
-                {
-                    donationsList && (
-                        donationsList.slice(0, dataLength).map(card => (
-                            <Donation key={card.id} card={card}></Donation>
-                        ))
-                    )
-                }    
-            </div>       
+        <div>
             {
-                donationsList && (
-                    <div className="flex items-center justify-center my-12">
-                        <button onClick={() => setDataLength(donationsList.length)} className="bg-red-500 text-white p-3 rounded-lg">Show More</button>
+                donationsList.length > 0 ? (
+                    <div className="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-24 my-12 ">
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {
+                                donationsList && (
+                                    donationsList.slice(0, dataLength).map(card => (
+                                        <Donation key={card.id} card={card}></Donation>
+                                    ))
+                                )
+                            }    
+                        </div>       
+                        {
+                            donationsList.length > 4 && (
+                                <div className="flex items-center justify-center my-12">
+                                    <button onClick={() => setDataLength(donationsList.length)} className="bg-red-500 text-white p-3 rounded-lg">Show More</button>
+                                </div>
+                            )
+                        }   
                     </div>
-                )
-            }   
+                ) : <h1 className="text-5xl font-bold text-center mt-40">No Donations Till Now..</h1>
+            }
         </div>
     );
 };
